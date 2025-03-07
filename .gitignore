@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+ENV/
+arena-env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Large data files and results
+*.csv
+results/
+plots/
+logit_lens_results/
+logit_lens_70B_results/
+logit_lens_70B_results_v2/
+probe_results/
+probe_results_70B/
+probe_results_70B_is_correct/
+probe_results_is_correct/
+truthfulqa_activations/
+truthfulqa_activations_70B/
+
+# Editor settings
+.vscode/
+.idea/
