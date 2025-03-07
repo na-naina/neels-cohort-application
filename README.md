@@ -17,7 +17,7 @@ The codebase provides functionality for:
 - `activation_collection.py`: Utilities for collecting and storing model activations
 - `capability.py`: Checks if model is capable of identifying category of the answer
 - `data.py`: Initial data investigation
-- `linear_probes.py`: Implementation of linear probes for analyzing activations
+- `linear_probes.py`: Implementation of linear probes for analyzing activations (requires for you to run activation_collection first)
 - `logit_lens.py`: Implementation of the logit lens technique
 - `mc_evaluation.py`: Multiple-choice task evaluation (For the most part is obsolete, can be completely replaced by linear probes or logit lense file)
 - `mc_vis.py`: Visualization for multiple-choice task results (Same)
@@ -30,28 +30,18 @@ The codebase provides functionality for:
 pip install -r requirements.txt
 ```
 
+You would also need you api tokens for huggingface models as well as nnsight.
+
 ### Examples
 
 To run the logit lens analysis:
 
 ```python
-python logit_lens.py
+python logit_lens.py --visualize-only --output-dir logit_lens_70B_results
 ```
 
 To train linear probes:
 
 ```python
-python linear_probes.py
+python linear_probes.py --activations-dir truthfulqa_activations_70B --output-dir probe_results_70B_is_correct --min-examples-per-class 5 --cuda --pooling-method last --batch-size=64
 ```
-
-## Results
-
-The repository includes scripts that produce various visualization outputs in the `plots/` directory.
-
-## License
-
-[Your choice of license]
-
-## Acknowledgments
-
-[Any acknowledgments you want to include]
